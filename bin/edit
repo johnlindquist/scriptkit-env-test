@@ -1,0 +1,11 @@
+#!/bin/sh
+
+NODE_PATH=/Users/johnlindquist/.kenv/node_modules:/Users/johnlindquist/.kit/node_modules \
+DOTENV_CONFIG_PATH=/Users/johnlindquist/.kenv/.env \
+/Users/johnlindquist/.kit/node/bin/node \
+--require dotenv/config \
+--require "/Users/johnlindquist/.kit/preload/api.cjs" \
+--require "/Users/johnlindquist/.kit/preload/kit.cjs" \
+--require "/Users/johnlindquist/.kit/preload/mac.cjs" \
+/Users/johnlindquist/.kit/cli/edit.js \
+"$@"
